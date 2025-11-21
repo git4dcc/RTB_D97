@@ -41,7 +41,7 @@ My Homebrew RTB D97 is an attempt for a universal DCC decoder toolkit. All you n
 # Hardware
 The software is compiled to run on a AVR64DA32 micro controller.
 
-<img src="supplemental/images/D99_pinout.jpg">
+<img src="supplemental/images/D97_pinout.jpg">
 
 | pin | label | direction | description |
 | --- | --- | --- | --- |
@@ -98,10 +98,8 @@ The fuse settings as well as the P-code (D97Pxxxx.hex) has to be installed by us
 |<img src=supplemental/images/D97_fuses.jpg width=500>|
 
 # Images
-<img src="supplemental/images/D99_usecase4.jpg" width=260> <img src="supplemental/images/D99_usecase2.jpg" width=508>
-
-# YouTube
-See the D99 decoder core prototype in action piggyback on a LED test carrier.<br><br>
-[<img src="https://img.youtube.com/vi/czScUCT7jxQ/0.jpg" width=30%>](https://www.youtube.com/watch?v=czScUCT7jxQ) [<img src="https://img.youtube.com/vi/SbPsQP1knIc/0.jpg" width=30%>](https://www.youtube.com/watch?v=SbPsQP1knIc)
+|CPU only | /w Service Mode |
+| --- | --- |
+| <img src="supplemental/images/D97_proposal_1.jpg" width=260> | <img src="supplemental/images/D97_proposal_1.jpg" width=260> |
 
 This project is intended for hobby use only and is distributed in accordance with the Apache License 2.0 agreement.
