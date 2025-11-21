@@ -1,131 +1,101 @@
-# RTB_D99
+# RTB_D97
 [![Real-time Bus (RTB)](https://img.shields.io/badge/RTB_Project-FF6699)](https://www.rtb4dcc.de)
 [![Kicad_Libs](https://img.shields.io/badge/Kicad_Libs-29C7FF)](https://github.com/git4dcc/RTB_SamacSys)
 [![Apache License 2.0](https://img.shields.io/badge/license-Apache%20License%202.0-lightgray)](https://www.apache.org/licenses/LICENSE-2.0)
 
-My Homebrew RTB D99 is an advanced, open-source decoder core (AVR64DA48) designed for serious modelers. It provides individual, high-density control for up to 32 LEDs and 4 auxiliary ports. More than just control, this core is engineered for ultimate reliability:
-- **Flicker-Free Power:** Includes charging logic for external Polymer or Supercapacitors for robust power backup.
-- **Real-Time Diagnostics:** Harness the power of Railcom DYN to transmit vital data, including Quality of Service (QoS), track voltage, and temperature, back to your central station.
-- **DIY High-Density:** Fully open-source KiCad design (4-layer PCB) ready for reflow assembly.
-- **WS28xx bus**: Can drive up to 32 LEDs on a WS28xx serial bus
-
-LED base carrier
-- [Example-1: HO Roco #44741 coach](ledbase/Roco_44741)
-
-<br>
+My Homebrew RTB D97 is an attempt for a universal DCC decoder toolkit. All you need in a AVR64DA32 micro controller and the firmware posted in this repository. You get a ready to run DCC function decoder.
 
 <details>
 <summary>User Guides</summary>
 
-- User Guide - DE
-- [User Guide - EN](https://rtb4dcc.de/rtb_decoder_reference_en/)
+- [Anleitung  - DE](https://rtb4dcc.de/rtb_fndecoder_Reference_de/)
+- [User Guide - EN](https://rtb4dcc.de/rtb_fndecoder_Reference_en/)
 
 </details>
 
-<img src="supplemental/images/D99_main.jpg" width=700>
+<img src="supplemental/images/D97_main.jpg" width=700>
 <br>
 
-## Decoder features
+## Decoder firmware features
 - **DCC**
-  - DCC-A automatic logon
-  - DCC-R protocol extension
+  - DCC-A support
+  - DCC-R support
   - Service Mode Programming
 - **Railcom**
   - Channel 1/2
   - POM, xPOM
-  - DYN: QoS, Track-Voltage, Scap-Voltage, Temp, Ambient light
-- **AUX ports**
-  - 4 AUX ports (3.3V logic level)
-  - AUX ports my be used for Servo
-- **LED ports**
-  - designed for
-    - SR: 74HC595 shift registers
-    - WS: WS2811 neo pixel
-  - up to 32 individual LEDs using either SR or WS
-- SUSI 3.3V
-- 2.8V SCAP (optional, external to PCB)
-- 16V Polymer Caps (optional, external to PCB)
-- Inrush limited
-- max track voltage 36V
-- CPU heartbeat LED
-- ambient light sensor (optional)
-- fast firmware update on main tracks via DCC-R
+  - DYN: QoS, Track-Voltage, Temperatur, (and more)
+- **I/O ports**
+    - 10 AUX ports total (6 ports with 93kHz hardware PWM)
+    - 32 LED ports
+      - driven by (SR: 74HC595) or (WS: WS2811/WS2812 neo pixel)
+    - One 10-bit analog output port (0-5V)
+    - Two 12-bit analog input ports (0-5V)
+  - one SUSI port (5V)
+  - one Servo port
+- **General**
+  - buffer capacitor control
+  - CPU heartbeat LED for status information
+  - fast firmware update on main tracks via DCC-R
 
 # Hardware
-The current PCB layout uses SMD footprints with 0.4mm pitch and mainly 0402 parts. Reflow soldering is mandatory.
-The layout has been optimized to automatic PCB assembly.
+The software is compiled to run on a AVR64DA32 micro controller.
 
-| top | bottom |
-| --- | --- |
-| <img src="supplemental/images/D99_top.jpg"> | <img src="supplemental/images/D99_btm.jpg"> |
-
-## PCB
-- 4-layer PCB, FR4, 28 x 15 x 0.8mm
-- CPU: AVR64DA48
-
-<details>
-<summary>Details</summary>
-
-<br>
 <img src="supplemental/images/D99_pinout.jpg">
-<br><br>
 
 | pin | label | direction | description |
 | --- | --- | --- | --- |
-| 1 | DCC-b | input | DCC signal from track |
-| 3 | DCC-1 | input | DCC signal from track |
-| 5 | GND | output | Decoder ground signal (after rectifier) |
-| 7 | AUX-4 | output | Logic level auxiliary port (3.3V) |
-| 9 | AUX-3 | output | Logic level auxiliary port (3.3V) |
-| 11 | AUX-2 | output | Logic level auxiliary port (3.3V) |
-| 13 | AUX-1 | output | Logic level auxiliary port (3.3V) |
-| 15 | GND | output | same as pin 5 |
-| 17 | VTRK | output | (+) Track voltage after rectifier (goes up to 25V) |
-| 19 | NCAP | output | (+) Connect to external polymer capacitors (cap must tolerate 16V) |
-| 2 | 3V3 | output | (+) Decoder CPU voltage (3.3V) |
-| 4 | SUSI_clk | output | SUSI clock signal (3.3V) |
-| 6 | SUSI_dat | output | SUSI data signal (3.3V) |
-| 8 | uOpto | input | Connects an optional ambient light sensor |
-| 10 | UPDI | in/out | CPU programming port |
-| 12 | LED.oe | output | Connect to HC595 shift register output enable pin |
-| 14 | LED.stcp | output | Connect to HC595 shift register staging clock pin |
-| 16 | LED.ds | output | Connect to HC595 shift register data pin |
-| 18 | LED.ds | output | Connect to HC595 shift register shift clock pin |
-| 20 | SCAP | output | (+) Connect to external supercap (cap must tolerate 2.8V) |
-
-</details>
+| PA0 | F0r | output | Front light (rear) (/w hardware pwm) |
+| PA1 | F0f | output | Front light (front) (/w hardware pwm) |
+| PA2 | AUX1 | output | Auxiliary port 1 (/w hardware pwm) |
+| PA3 | AUX2 | output | Auxiliary port 2 (/w hardware pwm) |
+| PA4 | AUX3 | output | Auxiliary port 3 (/w hardware pwm) |
+| PA5 | AUX4 | output | Auxiliary port 4 (/w hardware pwm) |
+| PA6 | AUX5 | output | Auxiliary port 5 |
+| PA7 | AUX6 | output | Auxiliary port 6 |
+| PC0 | WS28xx | output | WS: DO / SR: data |
+| PC1 | DCC-a | input | DCC input (left track) |
+| PC2 | AUX7 | output | Auxiliary port 7 / SR: SHCP |
+| PC3 | AUX8 | output | Auxiliary port 8 / SR: STCP |
+| PD0 | uDCC-a | input | analog track voltage measure (left track) |
+| PD1 | uDCC-b | input | analog track voltage measure (right track) |
+| PD2 | iAUX | input | analog AUX current measure |
+| PD3 | IN1 | input | analog input 1 |
+| PD4 | IN2 | input | analog input 2 |
+| PD5 | ACK | output | Service mode ACK current generator pin |
+| PD6 | DAC_out | output | Analog output voltage |
+| PD7 | CAP_ena | output | Buffer capacity control |
+| PF0 | Servo_dat | output | Servo data |
+| PF1 | Servo_pwr | output | Servo power control |
+| PF2 | SUSI_sda | output | SUSI data |
+| PF3 | SUSI_scl | output | SUSI clock |
+| PF4 | Railcom | output | Railcom transmitter |
+| PF5 | LED.hbt | output | Hearbeat LED |
+| PF6 | DCC-b | input | DCC input (right track) |
+| UPDI | UPDI | in/out | Programming pin |
 
 ## Kicad
-[Schematic](doc/D99_schematic.pdf) | [Layout](doc/D99_layout.pdf) | [Gerber](gerber)
-
-<details>
-<summary>Dependency</summary>
-<br>
-
-:yellow_circle: Requires my Kicad project library [RTB_SamacSys](https://github.com/git4dcc/RTB_SamacSys) in the same directory tree.
-
-</details>
-
+[Schematic](doc/D97_schematic.pdf)
 
 ## Firmware
 Filename structure: { **pcb** }{ **code** }{ **version** }.hex
 
-Example: **D99F0001**.hex
+Example: **D97F0001**.hex
 
 |   | Description |
 | --- | --- |
-| **pcb** | Name of matching hardware (**D99**) |
+| **pcb** | Name of matching hardware (**D97**) |
 | **code** | Type of code contained (**R**=rom, **B**=bootloader, **F**=flash, **U**=bld update, **P**=UPDI factory code) |
 | **version** | Release version (**####**) |
 
 [Firmware files](firmware)
 
 ## UPDI / Fuses
-The fuse settings as well as the P-code (D99Pxxxx.hex) has to be installed by using UPDI.<br>
+The fuse settings as well as the P-code (D97Pxxxx.hex) has to be installed by using UPDI.<br>
 
 | Fuses Setting |
 | --- |
-|<img src=supplemental/images/D99_fuses.jpg width=500>|
+|<img src=supplemental/images/D97_fuses.jpg width=500>|
 
 # Images
 <img src="supplemental/images/D99_usecase4.jpg" width=260> <img src="supplemental/images/D99_usecase2.jpg" width=508>
