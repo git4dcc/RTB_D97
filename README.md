@@ -3,15 +3,13 @@
 [![Kicad_Libs](https://img.shields.io/badge/Kicad_Libs-29C7FF)](https://github.com/git4dcc/RTB_SamacSys)
 [![Apache License 2.0](https://img.shields.io/badge/license-Apache%20License%202.0-lightgray)](https://www.apache.org/licenses/LICENSE-2.0)
 
-My Homebrew RTB D97 is an attempt for a universal DCC decoder toolkit. All you need in a AVR64DA32 micro controller and the firmware posted in this repository. You get a ready to run DCC function decoder.
+**Unleash your own Homebrew DCC Function Decoder!**
+This repo is a feature rich universal DCC function decoder toolkit. All you need in a AVR64DA32 micro controller and the firmware posted in this repository. You get a ready-to-run DCC function decoder.
 
-<details>
-<summary>User Guides</summary>
+User Guides
 
-- [Anleitung  - DE](https://rtb4dcc.de/rtb_fndecoder_Reference_de/)
+- [User Guide - DE](https://rtb4dcc.de/rtb_fndecoder_Reference_de/)
 - [User Guide - EN](https://rtb4dcc.de/rtb_fndecoder_Reference_en/)
-
-</details>
 
 <img src="supplemental/images/D97_main.jpg" width=700>
 <br>
@@ -39,7 +37,7 @@ My Homebrew RTB D97 is an attempt for a universal DCC decoder toolkit. All you n
   - fast firmware update on main tracks via DCC-R
 
 # Hardware
-The software is compiled to run on a AVR64DA32 micro controller.
+The software is compiled to run on a AVR64DA32 micro controller with the following pinout. Of course, the cpu will need some supporting circuitry such as power supply, voltage dividers or level shifters to become a fully functional DCC decoder.
 
 <img src="supplemental/images/D97_pinout.jpg">
 
@@ -95,11 +93,16 @@ The fuse settings as well as the P-code (D97Pxxxx.hex) has to be installed by us
 
 | Fuses Setting |
 | --- |
-|<img src=supplemental/images/D97_fuses.jpg width=500>|
+|t.b.d|
 
 # Example Hardware
-|CPU only | /w Service Mode | /w Railcom |
+| CPU only | /w Service Mode | /w Railcom |
 | --- | --- | --- |
-| <img src="supplemental/images/D97_proposal_1.jpg" width=300> | <img src="supplemental/images/D97_proposal_3.jpg" width=300> | <img src="supplemental/images/D97_proposal_4.jpg" width=300> |
+| <img src="supplemental/images/D97_proposal_1.jpg" width=310> | <img src="supplemental/images/D97_proposal_3.jpg" width=310> | <img src="supplemental/images/D97_proposal_4.jpg" width=310> |
+
+| external LED ports |
+| --- |
+| <img src="supplemental/images/D97_proposal_5.jpg"> |
+
 
 This project is intended for hobby use only and is distributed in accordance with the Apache License 2.0 agreement.
