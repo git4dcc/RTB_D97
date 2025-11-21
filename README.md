@@ -1,22 +1,18 @@
-# RTB_D16
+# RTB_D99
 [![Real-time Bus (RTB)](https://img.shields.io/badge/RTB_Project-FF6699)](https://www.rtb4dcc.de)
 [![Kicad_Libs](https://img.shields.io/badge/Kicad_Libs-29C7FF)](https://github.com/git4dcc/RTB_SamacSys)
 [![Apache License 2.0](https://img.shields.io/badge/license-Apache%20License%202.0-lightgray)](https://www.apache.org/licenses/LICENSE-2.0)
 
-My Homebrew [D16](https://rtb4dcc.de/hardware/decoder/d16/) decoder is a single sided mobile decoder with NEM-651 connector. The decoder is designed to integrate into the [RTB](https://rtb4dcc.de/concept/) digital control infrastructure.
+My Homebrew RTB D99 is an advanced, open-source decoder core (AVR64DA48) designed for serious modelers. It provides individual, high-density control for up to 32 LEDs and 4 auxiliary ports. More than just control, this core is engineered for ultimate reliability:
+- **Flicker-Free Power:** Includes charging logic for external Polymer or Supercapacitors for robust power backup.
+- **Real-Time Diagnostics:** Harness the power of Railcom DYN to transmit vital data, including Quality of Service (QoS), track voltage, and temperature, back to your central station.
+- **DIY High-Density:** Fully open-source KiCad design (4-layer PCB) ready for reflow assembly.
+- **WS28xx bus**: Can drive up to 32 LEDs on a WS28xx serial bus
 
-<details>
-<summary>See also</summary>
+LED base carrier
+- [Example-1: HO Roco #44741 coach](ledbase/Roco_44741)
 
-- [RTB_D12 - custom](https://github.com/git4dcc/RTB_D12) (Fleischmann V100)
-- [RTB_D13 - custom](https://github.com/git4dcc/RTB_D13) (Minitrix coach)
-- [RTB_D15 - custom](https://github.com/git4dcc/RTB_D15) (Minitrix V160)
-- [RTB_D20 - NEM651](https://github.com/git4dcc/RTB_D20)
-- [RTB_D21 - Next18](https://github.com/git4dcc/RTB_D21)
-- [RTB_D22 - Plux16](https://github.com/git4dcc/RTB_D22)
-- [RTB_D23 - NEM652](https://github.com/git4dcc/RTB_D23)
-
-</details>
+<br>
 
 <details>
 <summary>User Guides</summary>
@@ -26,11 +22,10 @@ My Homebrew [D16](https://rtb4dcc.de/hardware/decoder/d16/) decoder is a single 
 
 </details>
 
-<img src="supplemental/images/D16_main.jpg" width=800>
+<img src="supplemental/images/D99_main.jpg" width=700>
 <br>
 
-The decoder has the following features,
-- **NEM-651** connector
+## Decoder features
 - **DCC**
   - DCC-A automatic logon
   - DCC-R protocol extension
@@ -38,34 +33,70 @@ The decoder has the following features,
 - **Railcom**
   - Channel 1/2
   - POM, xPOM
-  - DYN: Speed, QoS, Track-voltage, Motor-current, AUX-current, Temp, Distance travelled
-- Single sided
-- Dimension: 17 x 11 mm
-- 7-20V track voltage
-- heartbeat LED
-- adjustable max motor current (default 300mA)
-- adjustable max AUX current (default 500mA)
-- over temp protection
-- Function output: LV/LR (dimmable, 1.4kHz) open drain
-- Function output: AUX1/AUX2/AUX3 logic level (3.3V)
-- optional external buffer capacitor (max. 1500uF)
-- <10mA idle power consumption
-- Firmware update over main tracks via DCC-R protocol
-
+  - DYN: QoS, Track-Voltage, Scap-Voltage, Temp, Ambient light
+- **AUX ports**
+  - 4 AUX ports (3.3V logic level)
+  - AUX ports my be used for Servo
+- **LED ports**
+  - designed for
+    - SR: 74HC595 shift registers
+    - WS: WS2811 neo pixel
+  - up to 32 individual LEDs using either SR or WS
+- SUSI 3.3V
+- 2.8V SCAP (optional, external to PCB)
+- 16V Polymer Caps (optional, external to PCB)
+- Inrush limited
+- max track voltage 36V
+- CPU heartbeat LED
+- ambient light sensor (optional)
+- fast firmware update on main tracks via DCC-R
 
 # Hardware
-The current PCB layout uses SMD footprints with 0.5mm pitch and mainly 0402 parts. Reflow soldering is recommended, handsoldering will be difficult.
+The current PCB layout uses SMD footprints with 0.4mm pitch and mainly 0402 parts. Reflow soldering is mandatory.
+The layout has been optimized to automatic PCB assembly.
 
-<img src="supplemental/images/D16_top.jpg" width=400>   <img src="supplemental/images/D16_btm.jpg" width=400>
+| top | bottom |
+| --- | --- |
+| <img src="supplemental/images/D99_top.jpg"> | <img src="supplemental/images/D99_btm.jpg"> |
 
 ## PCB
-- 6-layer PCB, FR4, 17 x 11 x 0.8mm (single sided)
-- CPU: AVR64DA32
-- Motor bridge: DRV8231
-- Connector: NEM-651
+- 4-layer PCB, FR4, 28 x 15 x 0.8mm
+- CPU: AVR64DA48
+
+<details>
+<summary>Details</summary>
+
+<br>
+<img src="supplemental/images/D99_pinout.jpg">
+<br><br>
+
+| pin | label | direction | description |
+| --- | --- | --- | --- |
+| 1 | DCC-b | input | DCC signal from track |
+| 3 | DCC-1 | input | DCC signal from track |
+| 5 | GND | output | Decoder ground signal (after rectifier) |
+| 7 | AUX-4 | output | Logic level auxiliary port (3.3V) |
+| 9 | AUX-3 | output | Logic level auxiliary port (3.3V) |
+| 11 | AUX-2 | output | Logic level auxiliary port (3.3V) |
+| 13 | AUX-1 | output | Logic level auxiliary port (3.3V) |
+| 15 | GND | output | same as pin 5 |
+| 17 | VTRK | output | (+) Track voltage after rectifier (goes up to 25V) |
+| 19 | NCAP | output | (+) Connect to external polymer capacitors (cap must tolerate 16V) |
+| 2 | 3V3 | output | (+) Decoder CPU voltage (3.3V) |
+| 4 | SUSI_clk | output | SUSI clock signal (3.3V) |
+| 6 | SUSI_dat | output | SUSI data signal (3.3V) |
+| 8 | uOpto | input | Connects an optional ambient light sensor |
+| 10 | UPDI | in/out | CPU programming port |
+| 12 | LED.oe | output | Connect to HC595 shift register output enable pin |
+| 14 | LED.stcp | output | Connect to HC595 shift register staging clock pin |
+| 16 | LED.ds | output | Connect to HC595 shift register data pin |
+| 18 | LED.ds | output | Connect to HC595 shift register shift clock pin |
+| 20 | SCAP | output | (+) Connect to external supercap (cap must tolerate 2.8V) |
+
+</details>
 
 ## Kicad
-[Schematic](doc/D16_schematic.pdf) | [Layout](doc/D16_layout.pdf) | [Gerber](gerber)
+[Schematic](doc/D99_schematic.pdf) | [Layout](doc/D99_layout.pdf) | [Gerber](gerber)
 
 <details>
 <summary>Dependency</summary>
@@ -75,31 +106,32 @@ The current PCB layout uses SMD footprints with 0.5mm pitch and mainly 0402 part
 
 </details>
 
+
 ## Firmware
 Filename structure: { **pcb** }{ **code** }{ **version** }.hex
 
-Example: **D16F0001**.hex
+Example: **D99F0001**.hex
 
 |   | Description |
 | --- | --- |
-| **pcb** | Name of matching hardware (**D16**) |
+| **pcb** | Name of matching hardware (**D99**) |
 | **code** | Type of code contained (**R**=rom, **B**=bootloader, **F**=flash, **U**=bld update, **P**=UPDI factory code) |
 | **version** | Release version (**####**) |
 
 [Firmware files](firmware)
 
+## UPDI / Fuses
+The fuse settings as well as the P-code (D99Pxxxx.hex) has to be installed by using UPDI.<br>
+
+| Fuses Setting |
+| --- |
+|<img src=supplemental/images/D99_fuses.jpg width=500>|
+
 # Images
-| top | bottom |
-| --- | --- |
-| <img src="supplemental/images/D16_top_connect.jpg" width=330> | <img src="supplemental/images/D16_btm_connect.jpg" width=600> |
-
-
-
+<img src="supplemental/images/D99_usecase4.jpg" width=260> <img src="supplemental/images/D99_usecase2.jpg" width=508>
 
 # YouTube
-Some YouTubes to see the D16 decoder in action.<br><br>
-[<img src="https://img.youtube.com/vi/xgu4DMY3AJU/0.jpg" width=260>](https://youtu.be/xgu4DMY3AJU)
-[<img src="https://img.youtube.com/vi/aH7pGpX5ZGo/0.jpg" width=260>](https://youtu.be/aH7pGpX5ZGo)
-[<img src="https://img.youtube.com/vi/Ebl8b5DK1Gw/0.jpg" width=260>](https://youtu.be/Ebl8b5DK1Gw)
+See the D99 decoder core prototype in action piggyback on a LED test carrier.<br><br>
+[<img src="https://img.youtube.com/vi/czScUCT7jxQ/0.jpg" width=30%>](https://www.youtube.com/watch?v=czScUCT7jxQ) [<img src="https://img.youtube.com/vi/SbPsQP1knIc/0.jpg" width=30%>](https://www.youtube.com/watch?v=SbPsQP1knIc)
 
 This project is intended for hobby use only and is distributed in accordance with the Apache License 2.0 agreement.
