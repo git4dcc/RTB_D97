@@ -1,0 +1,107 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "770f17cd-ae87-4649-af39-9a95ef9cf5c7")
+	(paper "A4")
+	(title_block
+		(title "RTB D98 Function Decoder")
+		(date "2025-11-18")
+		(rev "0")
+		(company "Frank Schumacher")
+		(comment 1 "'naked' DCC decoder project")
+		(comment 2 "D98.0")
+		(comment 4 "Licensed under the Apache License, Version 2")
+	)
+	(lib_symbols)
+	(sheet
+		(at 96.52 82.55)
+		(size 44.45 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "00000000-0000-0000-0000-00005b6c6b9d")
+		(property "Sheetname" "CPU"
+			(at 96.52 81.4701 0)
+			(effects
+				(font
+					(size 2.0066 2.0066)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "D98cpu.kicad_sch"
+			(at 96.52 102.4792 0)
+			(effects
+				(font
+					(size 2.0066 2.0066)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "D98"
+				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 157.48 82.55)
+		(size 50.8 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "00000000-0000-0000-0000-00005ca7768a")
+		(property "Sheetname" "External Ports"
+			(at 157.48 81.4701 0)
+			(effects
+				(font
+					(size 2.0066 2.0066)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "D98prt.kicad_sch"
+			(at 157.48 102.4792 0)
+			(effects
+				(font
+					(size 2.0066 2.0066)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "D98"
+				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
