@@ -3,16 +3,15 @@
 [![Kicad_Libs](https://img.shields.io/badge/Kicad_Libs-29C7FF)](https://github.com/git4dcc/RTB_SamacSys)
 [![Apache License 2.0](https://img.shields.io/badge/license-Apache%20License%202.0-lightgray)](https://www.apache.org/licenses/LICENSE-2.0)
 
-**Unleash your own Homebrew DCC Function Decoder!**
-This repo is a feature rich universal DCC function decoder toolkit. All you need in a AVR64DA32 micro controller and the firmware posted in this repository. You get a ready-to-run DCC function decoder.
+**Unleash your Homebrew DCC Function Decoder projects!**<br><br>
+This repository provides a high-performance, **compiled firmware** optimized for the AVR64DA32 (see the pinout below!). I provide the digital brain—the rest is up to you. While essential support circuitry (power, dividers, level shifters) is required, this design choice is intentionally open, **inviting you** to innovate and customize your ultimate DCC decoder hardware. Scroll down for starter schematics and explore my other repos for more circuit ideas!
 
-User Guides
+**User Guides**
 
 - [User Guide - DE](https://rtb4dcc.de/rtb_fndecoder_Reference_de/)
 - [User Guide - EN](https://rtb4dcc.de/rtb_fndecoder_Reference_en/)
 
 <img src="supplemental/images/D97_main.jpg" width=700>
-<br>
 
 ## Decoder firmware features
 - **DCC**
@@ -24,20 +23,20 @@ User Guides
   - POM, xPOM
   - DYN: QoS, Track-Voltage, Temperatur, (and more)
 - **I/O ports**
-    - 10 AUX ports total (6 ports with 93kHz hardware PWM)
-    - 32 LED ports
-      - driven by (SR: 74HC595) or (WS: WS2811/WS2812 neo pixel)
-    - One 10-bit analog output port (0-5V)
-    - Two 12-bit analog input ports (0-5V)
-  - one SUSI port (5V)
-  - one Servo port
+  - 10 AUX ports total (6 ports with 93kHz hardware PWM)
+  - 32 LED ports
+    - either (SR: 74HC595) or (WS: WS2811/WS2812) mode
+  - One 10-bit analog output port (0-5V)
+  - Two 12-bit analog input ports (0-5V)
+  - SUSI port (5V)
+  - Servo port
 - **General**
   - buffer capacitor control
   - CPU heartbeat LED for status information
   - fast firmware update on main tracks via DCC-R
 
 # Hardware
-The software is compiled to run on a AVR64DA32 micro controller with the following pinout. Of course, the cpu will need some supporting circuitry such as power supply, voltage dividers or level shifters to become a fully functional DCC decoder.
+The software is compiled to run on a AVR64DA32 micro controller with the following pinout.
 
 <img src="supplemental/images/D97_pinout.jpg">
 
