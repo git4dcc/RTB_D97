@@ -97,9 +97,9 @@ The fuse settings as well as the P-code (D97Pxxxx.hex) has to be installed by us
 | --- |
 |<img src=supplemental/images/D97_fuses.jpg width=500>|
 
-# Images
-|CPU only | /w Service Mode |
-| --- | --- |
-| <img src="supplemental/images/D97_proposal_1.jpg" width=260> | <img src="supplemental/images/D97_proposal_1.jpg" width=260> |
+# Example Hardware
+|CPU only | /w Service Mode | /w Railcom |
+| --- | --- | --- |
+| <img src="supplemental/images/D97_proposal_1.jpg" width=300> | <img src="supplemental/images/D97_proposal_3.jpg" width=300> | <img src="supplemental/images/D97_proposal_4.jpg" width=300> |
 
 This project is intended for hobby use only and is distributed in accordance with the Apache License 2.0 agreement.
