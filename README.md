@@ -4,22 +4,25 @@
 [![Apache License 2.0](https://img.shields.io/badge/license-Apache%20License%202.0-lightgray)](https://www.apache.org/licenses/LICENSE-2.0)
 
 **Unleash your Homebrew DCC Function Decoder projects!**<br><br>
-This repository provides a high-performance, **compiled firmware** optimized for the AVR64DA32 (see the pinout below!). I provide the digital brain—the rest is up to you. While essential support circuitry (power, dividers, level shifters) is required, this design choice is intentionally open, **inviting you** to innovate and customize your ultimate DCC decoder hardware. Scroll down for starter schematics and explore my other repos for more circuit ideas!
+This repository provides a high-performance, **compiled firmware** optimized for the Microchip AVR64DA32 (see the pinout below!). I provide the digital brain—the rest is up to you. While essential support circuitry (power, dividers, level shifters) is required, this design choice is intentionally open, **inviting you** to innovate and customize your ultimate DCC decoder hardware. Scroll down for starter schematics and explore my other repos for more circuit ideas!
 
 **User Guides**
 
 - [User Guide - DE](https://rtb4dcc.de/rtb_fndecoder_Reference_de/)
 - [User Guide - EN](https://rtb4dcc.de/rtb_fndecoder_Reference_en/)
 
-<img src="supplemental/images/D97_main.jpg" width=700>
+<img src="supplemental/images/D97_main.jpg">
 
 ## Decoder firmware features
 - **DCC**
-  - DCC-A support
+  - DCC-A support (/w Preamble fingerprint)
   - DCC-R support
   - Service Mode Programming
+  - Support of 'long 0000' programming address
 - **Railcom**
   - Channel 1/2
+  - jitter free
+  - programmable TSS1, TSS2 timing
   - POM, xPOM
   - DYN: QoS, Track-Voltage, Temperatur, (and more)
 - **I/O ports**
@@ -30,10 +33,16 @@ This repository provides a high-performance, **compiled firmware** optimized for
   - Two 12-bit analog input ports (0-5V)
   - SUSI port (5V)
   - Servo port
+- **Automation**
+  - light emulation (bulb, neon, mars, ditch, ...)
+  - Port automation (head-/taillight, engine room, driver cabin, ...)
 - **General**
   - buffer capacitor control
   - CPU heartbeat LED for status information
   - fast firmware update on main tracks via DCC-R
+- **DCC protocol statistic reporting**
+  - DCC bit timing
+  - DCC frame rate
 
 # Hardware
 The software is compiled to run on a AVR64DA32 micro controller with the following pinout.
@@ -75,6 +84,8 @@ The software is compiled to run on a AVR64DA32 micro controller with the followi
 [Schematic](doc/D97_schematic.pdf)
 
 ## Firmware
+Initial firmware load must be done by using a UPDI programmer. Subsequent software updates can be done by using the RTB layout control infrastructure.
+
 Filename structure: { **pcb** }{ **code** }{ **version** }.hex
 
 Example: **D97F0001**.hex
@@ -102,6 +113,10 @@ The fuse settings as well as the P-code (D97Pxxxx.hex) has to be installed by us
 | external LED ports |
 | --- |
 | <img src="supplemental/images/D97_proposal_5.jpg"> |
+<br>
+
+## Images
+<img src="supplemental/images/D97_usecase1.jpg">
 
 
 This project is intended for hobby use only and is distributed in accordance with the Apache License 2.0 agreement.
