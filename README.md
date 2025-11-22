@@ -87,6 +87,10 @@ The program is compiled for the AVR64DA32 microcontroller, which features standa
 ## Kicad
 <details>
   
+<br>
+This GitHub repository contains only the schematic. A PCB layout is not included, as the physical board design is intended to be customized and completed by each user.
+<br><br>
+
 [Schematic](doc/D97_schematic.pdf)
 
 </details>
@@ -95,7 +99,8 @@ The program is compiled for the AVR64DA32 microcontroller, which features standa
 <details>
 <br>
 Initial firmware load must be done by using a UPDI programmer. Subsequent software updates can be done by using the RTB layout control infrastructure.
-<br>
+<br><br>
+  
 Filename structure: { **pcb** }{ **code** }{ **version** }.hex
 
 Example: **D97F0001**.hex
