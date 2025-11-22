@@ -161,6 +161,10 @@ Some pictures of my prototype(s)
 
 # YouTube
 Showcased here are various decoder projects utilizing this DCC decoder toolkit. The accompanying PCBs are generally custom-designed to address specific functional and physical demands.<br><br>
-[<img src="https://img.youtube.com/vi/qKFzQKkI5GY/0.jpg" width=30%>](https://www.youtube.com/watch?v=qKFzQKkI5GY)
+| Video: H0 Roco /w RGB leds |
+| --- |
+| [<img src="https://img.youtube.com/vi/qKFzQKkI5GY/0.jpg" width=310>](https://www.youtube.com/watch?v=qKFzQKkI5GY) |
+
+
 
 This project is intended for hobby use only and is distributed in accordance with the Apache License 2.0 agreement.
