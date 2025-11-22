@@ -131,8 +131,27 @@ Below are several examples of supporting electronics that can be used to constru
 
 | external LED ports |
 | --- |
-| <img src="supplemental/images/D97_proposal_5.jpg"> |
+| <img src="supplemental/images/D97_proposal_5.jpg" width=310> |
 <br>
+
+# Examples
+Initial firmware load must be done by using a UPDI programmer. Subsequent software updates can be done by using the RTB layout control infrastructure.
+<br><br>
+  
+## Example 1
+This represents the **most basic DCC decoder design**. It requires only a power source and the DCC voltage divider to operate. All functional ports, as previously described, are available at standard logic voltage levels.
+
+<img src="supplemental/images/D97_example_1.jpg">
+
+## Example 2
+This example builds upon Example 1 by adding the essential capability of reading Configuration Variables (CVs) on the programming track. All other specifications and requirements remain the same as in the first example.
+
+<img src="supplemental/images/D97_example_2.jpg">
+
+## Example 3
+This example extends Example 2 by integrating Railcom (Bi-Directional Communication) capability. This powerful addition enables several advanced functions, including Programming on the Main (PoM), DCC-A, DCC-R, and firmware updates directly via the main track. All basic specifications and requirements remain unchanged from Example 1.
+
+<img src="supplemental/images/D97_example_3.jpg">
 
 # Images
 <img src="supplemental/images/D97_usecase1.jpg" width=310>
