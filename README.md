@@ -86,7 +86,9 @@ The program is compiled for the AVR64DA32 microcontroller, which features standa
 
 ## Kicad
 <details>
+  
 [Schematic](doc/D97_schematic.pdf)
+
 </details>
 
 ## Firmware
