@@ -125,11 +125,11 @@ Below are several examples of supporting electronics that can be used to constru
 | <img src="supplemental/images/D97_proposal_5.jpg"> |
 <br>
 
-## Images
-<img src="supplemental/images/D97_usecase1.jpg">
+# Images
+<img src="supplemental/images/D97_usecase1.jpg" width=310>
 
 # YouTube
-See some D97 decoder projects in action.<br><br>
+Showcased here are various decoder projects utilizing this DCC decoder toolkit. The accompanying PCBs are generally custom-designed to address specific functional and physical demands.<br><br>
 [<img src="https://img.youtube.com/vi/qKFzQKkI5GY/0.jpg" width=30%>](https://www.youtube.com/watch?v=qKFzQKkI5GY)
 
 This project is intended for hobby use only and is distributed in accordance with the Apache License 2.0 agreement.
