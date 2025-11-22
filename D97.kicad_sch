@@ -14,8 +14,38 @@
 		(comment 4 "Licensed under the Apache License, Version 2")
 	)
 	(lib_symbols)
+	(text "DCC decoder\n/w CV reading on ProgTrack\n/w Railcom"
+		(exclude_from_sim no)
+		(at 42.926 95.25 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "292a1dd9-b675-4225-ab6a-39955c9e5206")
+	)
+	(text "Simplistic DCC decoder\n/w CV reading on ProgTrack"
+		(exclude_from_sim no)
+		(at 43.18 62.484 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "e3262ffa-6728-4e93-9d6e-f4f6a23b7a97")
+	)
+	(text "Most simplistic DCC decoder"
+		(exclude_from_sim no)
+		(at 44.958 32.766 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ee66478d-12fd-480f-b507-2c473d3832a1")
+	)
 	(sheet
-		(at 96.52 82.55)
+		(at 158.75 86.36)
 		(size 44.45 19.05)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -31,7 +61,7 @@
 		)
 		(uuid "00000000-0000-0000-0000-00005b6c6b9d")
 		(property "Sheetname" "CPU"
-			(at 96.52 81.4701 0)
+			(at 158.75 85.2801 0)
 			(effects
 				(font
 					(size 2.0066 2.0066)
@@ -40,7 +70,7 @@
 			)
 		)
 		(property "Sheetfile" "D97cpu.kicad_sch"
-			(at 96.52 102.4792 0)
+			(at 158.75 106.2892 0)
 			(effects
 				(font
 					(size 2.0066 2.0066)
@@ -57,7 +87,7 @@
 		)
 	)
 	(sheet
-		(at 157.48 82.55)
+		(at 219.71 86.36)
 		(size 50.8 19.05)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -73,7 +103,7 @@
 		)
 		(uuid "00000000-0000-0000-0000-00005ca7768a")
 		(property "Sheetname" "External Ports"
-			(at 157.48 81.4701 0)
+			(at 219.71 85.2801 0)
 			(effects
 				(font
 					(size 2.0066 2.0066)
@@ -82,7 +112,7 @@
 			)
 		)
 		(property "Sheetfile" "D97prt.kicad_sch"
-			(at 157.48 102.4792 0)
+			(at 219.71 106.2892 0)
 			(effects
 				(font
 					(size 2.0066 2.0066)
@@ -94,6 +124,132 @@
 			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7"
 					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 22.225 85.725)
+		(size 44.45 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "2c20eac8-c032-451a-a146-805de8de18d4")
+		(property "Sheetname" "Example 3"
+			(at 22.225 84.6451 0)
+			(effects
+				(font
+					(size 2.0066 2.0066)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "D97ex3.kicad_sch"
+			(at 22.225 105.6542 0)
+			(effects
+				(font
+					(size 2.0066 2.0066)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "D97"
+				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 22.225 52.705)
+		(size 44.45 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "6cccf2d6-033d-4412-8748-bb7512a049e8")
+		(property "Sheetname" "Example 2"
+			(at 22.225 51.6251 0)
+			(effects
+				(font
+					(size 2.0066 2.0066)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "D97ex2.kicad_sch"
+			(at 22.225 72.6342 0)
+			(effects
+				(font
+					(size 2.0066 2.0066)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "D97"
+				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 21.59 22.86)
+		(size 44.45 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "c613447b-a386-4c7e-95ae-30a4a879f51e")
+		(property "Sheetname" "Example 1"
+			(at 21.59 21.7801 0)
+			(effects
+				(font
+					(size 2.0066 2.0066)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "D97ex1.kicad_sch"
+			(at 21.59 42.7892 0)
+			(effects
+				(font
+					(size 2.0066 2.0066)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "D97"
+				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7"
+					(page "3")
 				)
 			)
 		)
