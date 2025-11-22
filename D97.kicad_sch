@@ -254,6 +254,48 @@
 			)
 		)
 	)
+	(sheet
+		(at 22.86 119.38)
+		(size 44.45 19.05)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "f3d78089-67cb-4b73-a360-10c9ed082ca4")
+		(property "Sheetname" "Example 4"
+			(at 22.86 118.3001 0)
+			(effects
+				(font
+					(size 2.0066 2.0066)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "D97ex4.kicad_sch"
+			(at 22.86 139.3092 0)
+			(effects
+				(font
+					(size 2.0066 2.0066)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "D97"
+				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7"
+					(page "7")
+				)
+			)
+		)
+	)
 	(sheet_instances
 		(path "/"
 			(page "1")
