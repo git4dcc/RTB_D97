@@ -118,7 +118,7 @@ The fuse settings as well as the P-code (D97Pxxxx.hex) has to be installed by us
 
 | Fuses Setting |
 | --- |
-|t.b.d|
+|<img src="supplemental/images/D97_fuses.JPG">|
 
 </details>
 
