@@ -154,7 +154,10 @@ This example extends Example 2 by integrating Railcom (Bi-Directional Communicat
 <img src="supplemental/images/D97_example_3.jpg">
 
 # Images
-<img src="supplemental/images/D97_usecase1.jpg" width=310>
+Some pictures of my prototype(s)
+| /w two WS2812 RGB leds | /w sixteen WS2811 leds |
+| --- | --- |
+| <img src="supplemental/images/D97_usecase1.jpg" width=310> | <img src="supplemental/images/D97_usecase2.jpg" width=346> |
 
 # YouTube
 Showcased here are various decoder projects utilizing this DCC decoder toolkit. The accompanying PCBs are generally custom-designed to address specific functional and physical demands.<br><br>
