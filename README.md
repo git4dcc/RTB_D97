@@ -123,7 +123,7 @@ The fuse settings as well as the P-code (D97Pxxxx.hex) has to be installed by us
 </details>
 
 # Hardware building blocks
-Below are several examples of supporting electronics that can be used to construct DCC decoders with various functions and capabilities. These examples are offered only as suggestions and are designed to be fully customizable to meet specific needs.
+Below the supporting electronics that can be used to construct DCC decoders with various functions and capabilities. These examples are offered only as suggestions and are designed to be fully customizable to meet specific needs.
 
 | CPU only | /w Service Mode | /w Railcom |
 | --- | --- | --- |
@@ -135,7 +135,7 @@ Below are several examples of supporting electronics that can be used to constru
 <br>
 
 # Examples
-Initial firmware load must be done by using a UPDI programmer. Subsequent software updates can be done by using the RTB layout control infrastructure.
+Below some examples of different Decoder designs. Starting from very simple up to fully featured.
 <br><br>
   
 ## Example 1
