@@ -6,6 +6,8 @@
 **Unleash your Homebrew DCC Function Decoder projects!**<br><br>
 This repository provides a high-performance, **compiled firmware** tailored for the Microchip AVR64DA32 (see the pinout below!). I provide the digital brain — the rest is up to you. While essential support circuitry (power, dividers, level shifters) is required, this design choice is intentionally open, **inviting you** to innovate and customize your ultimate DCC decoder hardware. Scroll down for starter schematics and explore my other repos for more circuit ideas!
 
+:star2: This decoder offers the distinctive capability of controlling up to **32 WS2811 NeoPixel LEDs**, facilitating simple LED wiring.
+
 **User Guides**
 
 - [User Guide - DE](https://rtb4dcc.de/rtb_fndecoder_Reference_de/)
@@ -17,16 +19,16 @@ The setup shows the CPU interfaced with the DCC signal (orange wires), a Raicom 
 
 ## Decoder firmware features
 - **DCC**
-  - DCC-A support (/w Preamble fingerprint)
-  - DCC-R support
-  - Service Mode Programming
+  - DCC-A support (incl. Preamble fingerprint)
+  - DCC-R support (DCC extension)
+  - Service Mode Programming (Programming track)
   - Support of 'long 0000' programming address
 - **Railcom**
   - Channel 1/2
   - jitter free
   - programmable TSS1, TSS2 timing
   - POM, xPOM
-  - DYN: QoS, Track-Voltage, Temperatur, (and more)
+  - DYN: QoS, Track-Voltage, Temperatur and more
 - **I/O ports**
   - 10 AUX ports total (6 ports with 93kHz hardware PWM)
   - 32 LED ports
