@@ -118,5 +118,8 @@ The fuse settings as well as the P-code (D97Pxxxx.hex) has to be installed by us
 ## Images
 <img src="supplemental/images/D97_usecase1.jpg">
 
+# YouTube
+See some D97 decoder projects in action.<br><br>
+[<img src="https://img.youtube.com/vi/qKFzQKkI5GY/0.jpg" width=30%>](https://www.youtube.com/watch?v=qKFzQKkI5GY)
 
 This project is intended for hobby use only and is distributed in accordance with the Apache License 2.0 agreement.
