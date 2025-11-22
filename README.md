@@ -141,6 +141,8 @@ Below some examples of different Decoder designs. Starting from very simple up t
 ## Example 1
 This represents the **most basic DCC decoder design**. It requires only a power source and the DCC voltage divider to operate. All functional ports, as previously described, are available at standard logic voltage levels.
 
+- _Note: The pulldown resistors have proven to be a good investment for DCC/Railcom reliability. I recommend to have them always there._
+
 <img src="supplemental/images/D97_example_1.jpg">
 
 ## Example 2
@@ -151,12 +153,15 @@ This example builds upon Example 1 by adding the essential capability of reading
 ## Example 3
 This example extends Example 2 by integrating Railcom (Bi-Directional Communication) capability. This powerful addition enables several advanced functions, including Programming on the Main (PoM), DCC-A, DCC-R, and firmware updates directly via the main track. All basic specifications and requirements remain unchanged from Example 1.
 
+- _Note: I am also adding the track voltage divider so the decoder can report **track voltage** via Railcom correctly_
+
 <img src="supplemental/images/D97_example_3.jpg">
 
 ## Example 4
-Here a simple but powerful NeoPixel Decoder that commands up to 32 WS28xx LEDs. Whether you prefer the control of WS2811 driver chips or the simplicity of integrated RGB LEDs like the WS2812C, this decoder is your lighting maestro. To keep things efficient, I recommend opting for the low-current (5mA) versions of these chips. Why? Because if you crank up all those LEDs to full brightness simultaneously, your decoder would be drawing some serious current! Choose wisely to save power and prevent overloading your setup.
+Here a simple but powerful NeoPixel Decoder that commands up to 32 WS28xx LEDs. Whether you prefer the control of WS2811 driver chips or the simplicity of integrated RGB LEDs like the WS2812C, this decoder is your lighting maestro.
 
-``Note: Here you must use VDD = 5V decoder voltage because most WS28xx chips only run reliably with 5V.``
+- _Note 1: Here VDD must be set to 5V because most WS28xx chips only run reliably with 5V._
+- _Note 2: I highly recommend opting for the low-current (5mA) versions of the WS28xx chips otherwise the decoder would be drawing some serious current if all LEDs are at full brightness!_
 
 <img src="supplemental/images/D97_example_4.jpg">
 
