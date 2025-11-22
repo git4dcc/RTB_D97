@@ -45,7 +45,7 @@ This repository provides a high-performance, **compiled firmware** optimized for
   - DCC frame rate
 
 # Hardware
-The software is compiled to run on a AVR64DA32 micro controller with the following pinout.
+The program is compiled for the AVR64DA32 microcontroller, which features standard logic-level digital I/O and analog I/O limited to a VDD swing. Therefore, external voltage level translators/drivers are required to allow the device to correctly decode and drive DCC signals.
 
 <img src="supplemental/images/D97_pinout.jpg">
 
@@ -81,11 +81,15 @@ The software is compiled to run on a AVR64DA32 micro controller with the followi
 | UPDI | UPDI | in/out | Programming pin |
 
 ## Kicad
+<details>
 [Schematic](doc/D97_schematic.pdf)
+</details>
 
 ## Firmware
+<details>
+<br>
 Initial firmware load must be done by using a UPDI programmer. Subsequent software updates can be done by using the RTB layout control infrastructure.
-
+<br>
 Filename structure: { **pcb** }{ **code** }{ **version** }.hex
 
 Example: **D97F0001**.hex
@@ -104,6 +108,8 @@ The fuse settings as well as the P-code (D97Pxxxx.hex) has to be installed by us
 | Fuses Setting |
 | --- |
 |t.b.d|
+
+</details>
 
 # Example Hardware
 | CPU only | /w Service Mode | /w Railcom |
