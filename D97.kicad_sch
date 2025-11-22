@@ -5,12 +5,12 @@
 	(uuid "770f17cd-ae87-4649-af39-9a95ef9cf5c7")
 	(paper "A4")
 	(title_block
-		(title "RTB D98 Function Decoder")
-		(date "2025-11-18")
+		(title "RTB D97 FN Decoder Toolkit")
+		(date "2025-11-22")
 		(rev "0")
 		(company "Frank Schumacher")
 		(comment 1 "'naked' DCC decoder project")
-		(comment 2 "D98.0")
+		(comment 2 "D97.0")
 		(comment 4 "Licensed under the Apache License, Version 2")
 	)
 	(lib_symbols)
@@ -39,7 +39,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "D98cpu.kicad_sch"
+		(property "Sheetfile" "D97cpu.kicad_sch"
 			(at 96.52 102.4792 0)
 			(effects
 				(font
@@ -49,7 +49,7 @@
 			)
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7"
 					(page "2")
 				)
@@ -81,7 +81,7 @@
 				(justify left bottom)
 			)
 		)
-		(property "Sheetfile" "D98prt.kicad_sch"
+		(property "Sheetfile" "D97prt.kicad_sch"
 			(at 157.48 102.4792 0)
 			(effects
 				(font
@@ -91,7 +91,7 @@
 			)
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7"
 					(page "4")
 				)

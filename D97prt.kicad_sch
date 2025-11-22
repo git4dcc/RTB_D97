@@ -5,12 +5,12 @@
 	(uuid "8ad6c5f9-c678-4090-9961-5f755b590e95")
 	(paper "A4")
 	(title_block
-		(title "RTB D98 Function Decoder")
-		(date "2025-11-18")
+		(title "RTB D97 FN Decoder Toolkit")
+		(date "2025-11-22")
 		(rev "0")
 		(company "Frank Schumacher")
 		(comment 1 "'naked' DCC decoder project")
-		(comment 2 "D98.0")
+		(comment 2 "D97.0")
 		(comment 4 "Licensed under the Apache License, Version 2")
 	)
 	(lib_symbols
@@ -2085,7 +2085,7 @@
 			(uuid "b1066627-ab18-4d18-9dbd-a145163a084b")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "#PWR015")
 					(unit 1)
@@ -2264,7 +2264,7 @@
 			(uuid "cc2b33d7-91fb-4dd2-8f9c-43762c2aeb2f")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "IC1")
 					(unit 1)
@@ -2329,7 +2329,7 @@
 			(uuid "72e80431-bd51-427b-93ca-f3668bd54647")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "#PWR022")
 					(unit 1)
@@ -2394,7 +2394,7 @@
 			(uuid "f0f2c259-700c-4ff6-93f2-e1310d595ad8")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "#PWR028")
 					(unit 1)
@@ -2573,7 +2573,7 @@
 			(uuid "666c020c-8d69-48cb-a277-79d76d510cb0")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "IC5")
 					(unit 1)
@@ -2638,7 +2638,7 @@
 			(uuid "4e15a4f5-e170-47b6-9f84-1fc29580e705")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "#PWR08")
 					(unit 1)
@@ -2703,7 +2703,7 @@
 			(uuid "9308252f-5753-435c-bf56-e89907813491")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "#PWR024")
 					(unit 1)
@@ -2768,7 +2768,7 @@
 			(uuid "991332e4-424d-47b5-a41e-3dd9e912ffc6")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "#PWR025")
 					(unit 1)
@@ -2975,7 +2975,7 @@
 			(uuid "ef8f05c1-cd6c-4d9a-ab20-fa6b1c99d22c")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "U5")
 					(unit 1)
@@ -3040,7 +3040,7 @@
 			(uuid "1ac889e8-6550-4797-9268-adbc51ebd095")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "#PWR021")
 					(unit 1)
@@ -3105,7 +3105,7 @@
 			(uuid "10136d32-6d93-43e9-9cb7-7f990fad6fa1")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "#PWR09")
 					(unit 1)
@@ -3170,7 +3170,7 @@
 			(uuid "1ab605ca-9fde-485f-9960-efd83d2df6d9")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "#PWR023")
 					(unit 1)
@@ -3235,7 +3235,7 @@
 			(uuid "4541a6ae-2f94-4a10-82bb-c01df1efcedb")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "#PWR027")
 					(unit 1)
@@ -3414,7 +3414,7 @@
 			(uuid "e2208ed6-aa67-4a4e-bbc6-5df38624e4e9")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "IC3")
 					(unit 1)
@@ -3621,7 +3621,7 @@
 			(uuid "ca9c6023-8320-4037-9e74-0d5ac4a4bb45")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "U4")
 					(unit 1)
@@ -3800,7 +3800,7 @@
 			(uuid "1aaded88-2c10-4bd8-a8c9-c196c1dcd4ad")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "IC4")
 					(unit 1)
@@ -3865,7 +3865,7 @@
 			(uuid "fe637653-ab75-48b5-b0cc-a811e030e763")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "#PWR026")
 					(unit 1)
@@ -3930,7 +3930,7 @@
 			(uuid "a2122ef0-e708-4c9f-bdb7-2babd5469283")
 		)
 		(instances
-			(project "D98"
+			(project "D97"
 				(path "/770f17cd-ae87-4649-af39-9a95ef9cf5c7/00000000-0000-0000-0000-00005ca7768a"
 					(reference "#PWR07")
 					(unit 1)
