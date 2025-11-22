@@ -156,6 +156,8 @@ This example extends Example 2 by integrating Railcom (Bi-Directional Communicat
 ## Example 4
 Here a simple but powerful NeoPixel Decoder that commands up to 32 WS28xx LEDs. Whether you prefer the control of WS2811 driver chips or the simplicity of integrated RGB LEDs like the WS2812C, this decoder is your lighting maestro. To keep things efficient, I recommend opting for the low-current (5mA) versions of these chips. Why? Because if you crank up all those LEDs to full brightness simultaneously, your decoder would be drawing some serious current! Choose wisely to save power and prevent overloading your setup.
 
+``Note: Here you must use VDD = 5V decoder voltage because most WS28xx chips only run reliably with 5V.``
+
 <img src="supplemental/images/D97_example_4.jpg">
 
 # Images
