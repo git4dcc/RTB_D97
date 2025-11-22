@@ -4,7 +4,7 @@
 [![Apache License 2.0](https://img.shields.io/badge/license-Apache%20License%202.0-lightgray)](https://www.apache.org/licenses/LICENSE-2.0)
 
 **Unleash your Homebrew DCC Function Decoder projects!**<br><br>
-This repository provides a high-performance, **compiled firmware** optimized for the Microchip AVR64DA32 (see the pinout below!). I provide the digital brain—the rest is up to you. While essential support circuitry (power, dividers, level shifters) is required, this design choice is intentionally open, **inviting you** to innovate and customize your ultimate DCC decoder hardware. Scroll down for starter schematics and explore my other repos for more circuit ideas!
+This repository provides a high-performance, **compiled firmware** tailored for the Microchip AVR64DA32 (see the pinout below!). I provide the digital brain — the rest is up to you. While essential support circuitry (power, dividers, level shifters) is required, this design choice is intentionally open, **inviting you** to innovate and customize your ultimate DCC decoder hardware. Scroll down for starter schematics and explore my other repos for more circuit ideas!
 
 **User Guides**
 
