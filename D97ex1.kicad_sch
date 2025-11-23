@@ -11,7 +11,7 @@
 		(company "Frank Schumacher")
 		(comment 1 "'naked' DCC decoder project")
 		(comment 2 "D97.0")
-		(comment 3 "Example 1: Simple DCC decoder")
+		(comment 3 "Example 1: Very simple DCC decoder")
 		(comment 4 "Licensed under the Apache License, Version 2")
 	)
 	(lib_symbols
@@ -2215,7 +2215,7 @@
 		)
 		(uuid "4d5cfe4a-00f1-4b5b-b9c6-9b9937f2c2bd")
 	)
-	(text "- can only write CVs on Programming Track"
+	(text "- can only write CVs (no reading)"
 		(exclude_from_sim no)
 		(at 138.684 92.202 0)
 		(effects
@@ -2304,7 +2304,7 @@
 		)
 		(uuid "e0ac3c77-94b6-4848-bf97-6eecb42da199")
 	)
-	(text "Very simple DCC Decoder"
+	(text "Example 1"
 		(exclude_from_sim no)
 		(at 137.668 84.836 0)
 		(effects

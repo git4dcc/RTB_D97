@@ -16,33 +16,47 @@
 	(lib_symbols)
 	(text "DCC decoder\n/w CV reading on ProgTrack\n/w Railcom"
 		(exclude_from_sim no)
-		(at 42.926 95.25 0)
+		(at 30.734 94.488 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
+			(justify left)
 		)
 		(uuid "292a1dd9-b675-4225-ab6a-39955c9e5206")
 	)
-	(text "Simplistic DCC decoder\n/w CV reading on ProgTrack"
+	(text "Simple DCC decoder\n/w CV reading on ProgTrack"
 		(exclude_from_sim no)
-		(at 43.18 62.484 0)
+		(at 31.242 61.976 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
+			(justify left)
 		)
 		(uuid "e3262ffa-6728-4e93-9d6e-f4f6a23b7a97")
 	)
-	(text "Most simplistic DCC decoder"
+	(text "Very simple DCC decoder"
 		(exclude_from_sim no)
-		(at 44.958 32.766 0)
+		(at 31.242 32.258 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
+			(justify left)
 		)
 		(uuid "ee66478d-12fd-480f-b507-2c473d3832a1")
+	)
+	(text "Simplistic DCC decoder\n/w CV reading on ProgTrack\n/w WS28xx neo pixel"
+		(exclude_from_sim no)
+		(at 30.734 129.286 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f5959e49-aae2-432c-ac4b-795c049fb449")
 	)
 	(sheet
 		(at 158.75 86.36)

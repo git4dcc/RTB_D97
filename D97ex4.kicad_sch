@@ -11,6 +11,7 @@
 		(company "Frank Schumacher")
 		(comment 1 "'naked' DCC decoder project")
 		(comment 2 "D97.0")
+		(comment 3 "Example 4: Simple DCC Decoder /w WS28xx NeoPixel")
 		(comment 4 "Licensed under the Apache License, Version 2")
 	)
 	(lib_symbols
@@ -2753,9 +2754,9 @@
 		)
 		(uuid "0cef40a3-ec6a-483e-bdef-1feb578362db")
 	)
-	(text "- can read/write CVs on Programming Track\n- connects to WS28xx Neo Pixel LEDs"
+	(text "- can read/write CVs on Programming Track\n- driving WS28xx Neo Pixel LEDs"
 		(exclude_from_sim no)
-		(at 140.716 91.44 0)
+		(at 140.716 90.17 0)
 		(effects
 			(font
 				(size 3.048 3.048)
@@ -2857,7 +2858,7 @@
 		)
 		(uuid "a2ce29ae-581c-461b-94a8-48e2b56a8d55")
 	)
-	(text "DCC Decoder /w WS28xx LEDs"
+	(text "Example 4"
 		(exclude_from_sim no)
 		(at 140.462 80.772 0)
 		(effects
@@ -3333,7 +3334,7 @@
 	)
 	(polyline
 		(pts
-			(xy 269.24 161.29) (xy 81.915 161.29)
+			(xy 277.495 161.29) (xy 81.915 161.29)
 		)
 		(stroke
 			(width 0)
@@ -3393,7 +3394,7 @@
 	)
 	(polyline
 		(pts
-			(xy 269.24 114.935) (xy 269.24 161.29)
+			(xy 277.495 114.935) (xy 277.495 161.29)
 		)
 		(stroke
 			(width 0)
@@ -3473,7 +3474,7 @@
 	)
 	(polyline
 		(pts
-			(xy 81.915 114.935) (xy 269.875 114.935)
+			(xy 81.915 114.935) (xy 277.495 114.935)
 		)
 		(stroke
 			(width 0)

@@ -11,6 +11,7 @@
 		(company "Frank Schumacher")
 		(comment 1 "'naked' DCC decoder project")
 		(comment 2 "D97.0")
+		(comment 3 "Example 3: DCC Decoder /w Railcom")
 		(comment 4 "Licensed under the Apache License, Version 2")
 	)
 	(lib_symbols
@@ -3016,7 +3017,7 @@
 	)
 	(text "- can read/write CVs on Programming Track\n- Railcom (Pom, xPom, DCC-A, DCC-R, FW-update)"
 		(exclude_from_sim no)
-		(at 140.716 91.44 0)
+		(at 140.716 90.17 0)
 		(effects
 			(font
 				(size 3.048 3.048)
@@ -3142,7 +3143,7 @@
 		)
 		(uuid "a527a68d-62ab-4ee7-a943-d06326d2843f")
 	)
-	(text "Proper DCC Decoder"
+	(text "Example 3"
 		(exclude_from_sim no)
 		(at 140.462 80.772 0)
 		(effects

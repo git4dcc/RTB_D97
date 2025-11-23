@@ -2595,7 +2595,7 @@
 		)
 		(uuid "c147f587-e089-4f13-9de8-7781b5dec4fb")
 	)
-	(text "Simple DCC Decoder"
+	(text "Example 2"
 		(exclude_from_sim no)
 		(at 137.668 83.82 0)
 		(effects
