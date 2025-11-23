@@ -49,8 +49,13 @@ The setup shows the CPU interfaced with the DCC signal (orange wires), a Railcom
   - DCC frame rate
 
 # Hardware
-The program is compiled for the AVR64DA32 microcontroller, which features standard logic-level digital I/O and analog I/O limited to a VDD swing. Therefore, external voltage level translators/drivers are required to allow the device to correctly decode and drive DCC signals.
+The application targets the AVR64DA32 microcontroller. For assembly, the TQFP package is available and can be hand-soldered quite easily by someone with a little experience. For machine assembly, the smaller VQFN package is the preferred choice.
 
+<img src="supplemental/images/D97_mcu.jpg" width=200>
+
+As expected, the microcontroller's built-in I/O is restricted to standard logic levels and the VDD voltage range. Since DCC signals require a different voltage level, external drivers or level translators are necessary to ensure the device can interface with the DCC bus.
+
+## Pinout
 <img src="supplemental/images/D97_pinout.jpg">
 
 | pin | label | direction | description |
@@ -122,7 +127,7 @@ The fuse settings as well as the P-code (D97Pxxxx.hex) has to be installed by us
 
 </details>
 
-# Hardware building blocks
+# Building blocks
 Below the supporting electronics that can be used to construct DCC decoders with various functions and capabilities. These examples are offered only as suggestions and are designed to be fully customizable to meet specific needs.
 
 | CPU only | /w Service Mode | /w Railcom |
