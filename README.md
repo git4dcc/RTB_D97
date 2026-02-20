@@ -13,7 +13,7 @@ This repository provides a high-performance, **compiled firmware** tailored for 
 - [User Guide - DE](https://rtb4dcc.de/rtb_fndecoder_Reference_de/)
 - [User Guide - EN](https://rtb4dcc.de/rtb_fndecoder_Reference_en/)
 
-The setup shows the CPU interfaced with the DCC signal (orange wires), a Railcom transmitter (dark blue wire), and a wire to a heartbeat LED. Standard power (VDD/GND) lines are also there. The PCB located on the right holds all the necessary support electronics, including the power supply management and voltage level shifters. The detailed schematic for this board is available in the [RTB_P26 GitHub repository](https://github.com/git4dcc/RTB_P26).
+The setup shows the CPU interfaced with the DCC signal (orange wires), a Railcom transmitter (dark blue wire), and a wire to a heartbeat LED. Standard power (VDD/GND) lines are also there. The PCB located on the right holds all the necessary support electronics, including the power supply management and voltage level shifters. The detailed schematic for this board is available in the [RTB_P26 GitHub repository](/../../../../git4dcc/RTB_P26).
 <br><br>
 <img src="supplemental/images/D97_main.jpg">
 
