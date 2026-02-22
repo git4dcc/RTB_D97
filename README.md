@@ -1,8 +1,9 @@
 # RTB_D97
-[![Real-time Bus (RTB)](https://img.shields.io/badge/RTB_Project-FF6699)](https://www.rtb4dcc.de)
-[![Kicad_Libs](https://img.shields.io/badge/Kicad_Libs-29C7FF)](https://github.com/git4dcc/RTB_SamacSys)
+[![Forum Project](https://img.shields.io/badge/Forum_Project-FF6699)](https://forum.opendcc.de)
+[![Kicad_Libs](https://img.shields.io/badge/Kicad_Libs-29C7FF)](https:///../../../../git4dcc/RTB_SamacSys)
 [![Apache License 2.0](https://img.shields.io/badge/license-Apache%20License%202.0-lightgray)](https://www.apache.org/licenses/LICENSE-2.0)
 
+## This is a [opendcc](https://forum.opendcc.de/viewtopic.php?t=10857) forum project
 **Unleash your Homebrew DCC Function Decoder projects!**<br><br>
 This repository provides a high-performance, **compiled firmware** tailored for the Microchip AVR64DA32 (see the pinout below!). I provide the digital brain — the rest is up to you. While essential support circuitry (power, dividers, level shifters) is required, this design choice is intentionally open, **inviting you** to innovate and customize your ultimate DCC decoder hardware. Scroll down for starter schematics and explore my other repos for more circuit ideas!
 
